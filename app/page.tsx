@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 
 const categories = [
@@ -71,24 +70,24 @@ export default function Home() {
           </div>
 
           <div className="hero-stats">
-            <div>
+            <div className="hero-stat-item">
               <strong>100%</strong>
               <span>Quality</span>
             </div>
 
-            <div>
+            <div className="hero-stat-item">
               <strong>SR/18</strong>
               <span>Performance</span>
             </div>
 
-            <div>
+            <div className="hero-stat-item">
               <strong>ALL</strong>
               <span>Sports Lovers</span>
             </div>
           </div>
         </div>
 
-        <div className="hero-visual">
+        <div className="hero-visual" aria-hidden="true">
           <div className="hero-circle"></div>
           <div className="hero-brand">SR<span>/18</span></div>
           <p>BUILT FOR PERFORMANCE</p>
@@ -146,7 +145,7 @@ export default function Home() {
               </div>
 
               <div className="product-info">
-                <span>{product.category}</span>
+                <span className="product-category">{product.category}</span>
                 <h3>{product.name}</h3>
 
                 <div className="product-bottom">
@@ -154,7 +153,7 @@ export default function Home() {
                     Rs. {product.price.toLocaleString("en-PK")}
                   </strong>
 
-                  <Link href={`/products/${product.id}`}>
+                  <Link href={`/products/${product.id}`} className="view-product-btn">
                     View Product →
                   </Link>
                 </div>
@@ -190,19 +189,19 @@ export default function Home() {
 
       <section className="benefits-section">
         <div className="benefit">
-          <span>✦</span>
+          <span className="benefit-icon">✦</span>
           <h3>Premium Quality</h3>
           <p>Quality products for your active lifestyle.</p>
         </div>
 
         <div className="benefit">
-          <span>🚚</span>
+          <span className="benefit-icon">🚚</span>
           <h3>Fast Delivery</h3>
           <p>Get your favourite sportswear delivered.</p>
         </div>
 
         <div className="benefit">
-          <span>↩</span>
+          <span className="benefit-icon">↩</span>
           <h3>Easy Shopping</h3>
           <p>A simple and convenient shopping experience.</p>
         </div>
